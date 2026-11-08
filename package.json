@@ -1,0 +1,10 @@
+{
+  "name": "halcones-del-alba",
+  "version": "1.0.0",
+  "description": "Servidor multijugador 2v2 de Halcones del Alba",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "private": true
+}

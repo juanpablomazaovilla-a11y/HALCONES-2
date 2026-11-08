@@ -1,0 +1,32 @@
+HALCONES DEL ALBA - MULTIJUGADOR 2v2
+====================================
+Necesitas Node.js 18 o más nuevo (https://nodejs.org). No hay que instalar nada más.
+
+A) PROBAR EN TU PC Y TU CELULAR (misma red Wi-Fi)
+ 1. Descomprime el zip. Abre una terminal (cmd) dentro de la carpeta.
+ 2. Escribe:  node server.js
+ 3. En la PC abre:  http://localhost:8080
+ 4. En el celular abre:  http://IP-DE-TU-PC:8080
+    (la IP la ves con el comando ipconfig, "Dirección IPv4", por ejemplo 192.168.1.20)
+    Si Windows pregunta por el firewall, permite el acceso.
+ 5. En el juego: "Multijugador 2v2". La dirección del servidor se llena sola. Escribe tu nombre y "Buscar partida".
+    Si hay menos de 4 personas, las plazas libres las ocupa la IA.
+
+B) PUBLICARLO EN INTERNET (para jugar con amigos)
+ Sube esta carpeta a un servicio que ejecute Node.js (por ejemplo Render, Railway o Replit).
+ - Comando de inicio: node server.js
+ - El servicio le da el puerto con la variable PORT (ya lo lee el servidor).
+ - Tu dirección será algo como https://tu-juego.onrender.com ; ábrela y juega desde ahí.
+ Los pasos y límites de cada servicio cambian con el tiempo; los planes gratis a veces "duermen"
+ el servidor y tarda en despertar.
+
+OPCIONES (variables de entorno): PORT (8080), LOBBY_SECS (20), KILLS_TO_WIN (10), TIME_LIMIT (180 segundos)
+REGLA: gana el equipo que llegue a 10 derribos; si pasan 3 minutos, gana quien vaya adelante (o empate).
+
+NOTA: los impactos los calcula cada jugador en su dispositivo, así que alguien podría hacer trampa.
+Para jugar entre amigos está bien.
+
+ESCUADRONES Y GUERRAS (nuevo)
+- Los escuadrones los maneja el servidor (archivo squads.js). Se guardan en squads.json junto al servidor.
+  En hosting gratis sin disco permanente se borran al reiniciar el servidor.
+- Variables opcionales: WAR_HOURS (duración de la guerra, por defecto 24), WAR_SEARCH_MS (espera antes de asignar rival de práctica, 1800000 = 30 min), SQUADS_FILE (ruta del archivo).
